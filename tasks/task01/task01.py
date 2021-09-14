@@ -10,5 +10,5 @@ def checkN(k):
             print('Narciss number:', k, 'Pow:', q)
 
 # Main
-for i in range(1, 1000):
+for i in range(1, 1001):
     checkN(i)
