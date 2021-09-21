@@ -1,3 +1,7 @@
+import math
+
+
+# Method for menu printing
 def print_menu():
     print("")
     print("Menu:")
@@ -6,35 +10,37 @@ def print_menu():
     print("3. Exit")
 
 
-def calch():
+# Method calculation of triangle area by provided base and height
+def calc_by_height():
     s = input("Enter base and height: ")
     parts = s.split(" ")
     base = float(parts[0])
     height = float(parts[1])
-    areaFloat = 0.5 * base * height
-    print(f"Area is: {round(areaFloat)}")
+    area_float = 0.5 * base * height
+    print(f"Area is: {round(area_float)}")
 
 
-def calca():
-    import math
+# Method calculation of triangle area by provided 2 sides and angle(degrees) between them
+def calc_by_angle():
     s = input("Enter 2 sides and angle(degrees) between them: ")
     parts = s.split(" ")
-    sideA = float(parts[0])
-    sideB = float(parts[1])
+    side_a = float(parts[0])
+    side_b = float(parts[1])
     angle = int(parts[2])
     radians = math.radians(angle)
     sin = math.sin(radians)
-    area_float = float(0.5 * sideA * sideB * sin)
-    print(f"Area is: {round(areafloat)}")
+    area_float = float(0.5 * side_a * side_b * sin)
+    print(f"Area is: {round(area_float)}")
 
+
+# Main code
 print("Welcome to the triangle area calculation tool.")
 i = 0
 while i != 3:
-    printmenu()
+    print_menu()
     i = int(input("Enter menu item number: "))
     if i == 1:
-        calch()
+        calc_by_height()
     elif i == 2:
-        calca()
+        calc_by_angle()
 print("Goodbye!")
-
