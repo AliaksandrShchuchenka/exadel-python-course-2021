@@ -11,7 +11,7 @@ def calch():
     parts = s.split(" ")
     base = float(parts[0])
     height = float(parts[1])
-    areaFloat = 0.5*base*height
+    areaFloat = 0.5 * base * height
     print(f"Area is: {round(areaFloat)}")
 
 
