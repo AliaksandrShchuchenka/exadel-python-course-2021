@@ -24,18 +24,10 @@ d = {}
 for rn, s in enumerate(texts):
     parsestr(rn, s)
 
-# Settings for print
-allignsize = 15
-wrd = "word"
-wrdPostfix = (allignsize-len(wrd))*" "
-cnt = "count"
-cntPostfix = (allignsize-len(cnt))*" "
-fl = "first line"
+# Print header
+print(f"{'word' : <10}{'count' : <10}{'first line' : <10}")
 
-print(wrd, wrdPostfix, cnt, cntPostfix, "first line")
-
+# Print values
 for i in d.items():
     word, (rn, qty) = i
-    wordPostfix = (allignsize-len(word))*" "
-    qtyPostfix = (allignsize-len(str(qty)))*" "
-    print(word, wordPostfix, qty, qtyPostfix, rn)
+    print(f"{word : <10}{qty : <10}{rn : <10}")
