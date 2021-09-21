@@ -24,7 +24,7 @@ def calca():
     angle = int(parts[2])
     radians = math.radians(angle)
     sin = math.sin(radians)
-    areafloat = float(0.5*sideA*sideB*sin)
+    area_float = float(0.5 * sideA * sideB * sin)
     print(f"Area is: {round(areafloat)}")
 
 print("Welcome to the triangle area calculation tool.")
