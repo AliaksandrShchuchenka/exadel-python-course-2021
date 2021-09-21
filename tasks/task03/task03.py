@@ -1,5 +1,5 @@
 import re
-
+# Input text
 texts = [
     "Hello, World!",
     "The world is mine",
@@ -8,26 +8,26 @@ texts = [
 
 
 # Parser for each string in an input text
-def parsestr(r, st):
-    res = re.findall(r'\w+', st)
-    for w in res:
-        wl = w.lower()
-        if wl in d:
-            drn, dcnt = d[wl]
-            d[wl] = (drn, dcnt+1)
+def parsestr(current_row_number, current_text_line):
+    list_of_words = re.findall(r'\w+', current_text_line)
+    for word in list_of_words:
+        word_in_lower = word.lower()
+        if word_in_lower in dictionary:
+            dict_row_number, dict_word_count = dictionary[word_in_lower]
+            dictionary[word_in_lower] = (dict_row_number, dict_word_count+1)
         else:
-            d[wl] = (r, 1)
+            dictionary[word_in_lower] = (current_row_number, 1)
 
 
 # Main code
-d = {}
-for rn, s in enumerate(texts):
-    parsestr(rn, s)
+dictionary = {}
+for row_number, text_line in enumerate(texts):
+    parsestr(row_number, text_line)
 
 # Print header
 print(f"{'word' : <10}{'count' : <10}{'first line' : <10}")
 
 # Print values
-for i in d.items():
-    word, (rn, qty) = i
-    print(f"{word : <10}{qty : <10}{rn : <10}")
+for i in dictionary.items():
+    result_word, (result_row_number, result_word_count) = i
+    print(f"{result_word : <10}{result_word_count : <10}{result_row_number : <10}")
