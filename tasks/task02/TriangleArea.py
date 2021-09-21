@@ -1,4 +1,4 @@
-def printmenu():
+def print_menu():
     print("")
     print("Menu:")
     print("1. Calculate triangle area by base and height")
