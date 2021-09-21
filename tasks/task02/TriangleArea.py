@@ -1,4 +1,3 @@
-# Function to check if number is narcissistic
 def printmenu():
     print("")
     print("Menu:")
