@@ -36,11 +36,14 @@ def calc_by_angle():
 # Main code
 print("Welcome to the triangle area calculation tool.")
 i = 0
-while i != 3:
+while True:
     print_menu()
     i = int(input("Enter menu item number: "))
     if i == 1:
         calc_by_height()
     elif i == 2:
         calc_by_angle()
-print("Goodbye!")
+    elif i == 3:
+        print("Goodbye!")
+        exit()
+
