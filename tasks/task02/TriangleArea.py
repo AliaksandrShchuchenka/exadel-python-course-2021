@@ -45,5 +45,5 @@ while True:
         calc_by_angle()
     elif i == 3:
         print("Goodbye!")
-        exit()
+        break
 
