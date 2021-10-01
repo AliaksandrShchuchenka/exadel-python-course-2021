@@ -23,10 +23,7 @@ def calc_by_height():
 # Method calculation of triangle area by provided 2 sides and angle(degrees) between them
 def calc_by_angle():
     s = input("Enter 2 sides and angle(degrees) between them: ")
-    parts = s.split(" ")
-    side_a = float(parts[0])
-    side_b = float(parts[1])
-    angle = int(parts[2])
+    side_a, side_b, angle = map(float, s.split())
     radians = math.radians(angle)
     sin = math.sin(radians)
     area_float = float(0.5 * side_a * side_b * sin)
