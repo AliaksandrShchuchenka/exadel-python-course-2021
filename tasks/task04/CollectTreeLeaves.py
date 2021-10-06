@@ -21,5 +21,6 @@ def collect_leaves(tree: Union[Dict, List]) -> List:
     else:
         return tree
 
+
 assert collect_leaves(tree) == [1, 2, 3, 31, 5, 31, 7, 8, 9]
 assert collect_leaves([1, 2, 3]) == [1, 2, 3]
