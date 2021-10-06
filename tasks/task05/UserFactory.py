@@ -8,7 +8,7 @@ def create_user(name: str, surname: str, age: int = 42, **extra):
 
 
 assert create_user("John", "Doe") == \
-{
+    {
     "name": "John",
     "surname": "Doe",
     "age": 42 ,
