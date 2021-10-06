@@ -11,6 +11,7 @@ tree = {
     "node2": [7, 8, 9]
 }
 
+
 def collect_leaves(tree: Union[Dict, List]) -> List:
     if type(tree) is dict:
         result = []
