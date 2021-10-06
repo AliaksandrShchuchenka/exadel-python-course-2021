@@ -11,7 +11,7 @@ assert create_user("John", "Doe") == \
     {
     "name": "John",
     "surname": "Doe",
-    "age": 42 ,
+    "age": 42,
     "extra": {}
 }
 
